@@ -1,0 +1,6 @@
+com\mycompany\entity\Libro.class
+com\mycompany\entity\Libro_.class
+com\mycompany\beans\LibroFacade.class
+com\mycompany\dto\DTOLibro.class
+interfaces\ILibroFacadeLocal.class
+com\mycompany\beans\AbstractFacade.class
