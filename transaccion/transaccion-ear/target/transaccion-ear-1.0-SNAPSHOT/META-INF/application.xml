@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_6.xsd" version="6">
-  <display-name>transaccion-ear</display-name>
+  <display-name>Transaccion-ear</display-name>
   <module>
-    <ejb>transaccion-ejb-1.0-SNAPSHOT.jar</ejb>
+    <ejb>Transaccion-ejb-1.0-SNAPSHOT.jar</ejb>
   </module>
   <module>
     <web>
-      <web-uri>transaccion-web-1.0-SNAPSHOT.war</web-uri>
-      <context-root>/transaccion-web</context-root>
+      <web-uri>Transaccion-web-1.0-SNAPSHOT.war</web-uri>
+      <context-root>/Transaccion-web</context-root>
     </web>
   </module>
   <library-directory>lib</library-directory>

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Inicio Transacciones</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:growl id="growl" showDetail="true"/>
+            <p:panel id="panelProducto" header="Datos Productos">
+                <p:panelGrid columns="4" styleClass="ui-grid">
+                    <p:outputLabel for="nombre" value="Nombre Producto: " styleClass="requiredLbl"/>
+                    <p:inputText id="nombre" label="NombreProducto" value="#{inicioController.nombre}"/>
+                    
+                    <p:outputLabel for="precio" value="Precio Producto: " styleClass="requiredLbl"/>
+                    <p:inputText id="precio" label="PrecioProducto" value="#{inicioController.precio}"/>
+                    
+                    <p:outputLabel for="cantidad" value="Cantidad Producto: " styleClass="requiredLbl"/>
+                    <p:inputText id="cantidad" label="CantidadProducto" value="#{inicioController.cantidad}"/>
+                    
+                    <p:outputLabel for="descripcion" value="Descripcion Producto: " styleClass="requiredLbl"/>
+                    <p:inputText id="descripcion" label="DescripcionProducto" value="#{inicioController.descripcion}"/>     
+                </p:panelGrid>
+            </p:panel>
+            <p:separator/>
+            <p:panel id="panelUsuario" header="Datos Usuario">
+                <p:panelGrid columns="2" styleClass="ui-grid">
+                    <p:outputLabel for="nombres" value="Nombres Usuario: " styleClass="requiredLbl"/>
+                    <p:inputText id="nombres" label="NombresUsuario" value="#{inicioController.nombres}"/>
+                    
+                    <p:outputLabel for="apellidos" value="Apellidos Usuario: " styleClass="requiredLbl"/>
+                    <p:inputText id="apellidos" label="ApellidosUsuario" value="#{inicioController.apellidos}"/>    
+                </p:panelGrid>
+            </p:panel>
+            <p:separator/>
+            <p:panel id="panelCliente" header="Datos Cliente">
+                <p:panelGrid columns="2" styleClass="ui-grid">
+                    <p:outputLabel for="nombresc" value="Nombres Cliente: " styleClass="requiredLbl"/>
+                    <p:inputText id="nombresc" label="NombresCliente" value="#{inicioController.nombresc}"/>
+                    
+                    <p:outputLabel for="apellidosc" value="Apellidos Cliente: " styleClass="requiredLbl"/>
+                    <p:inputText id="apellidosc" label="ApellidosCliente" value="#{inicioController.apellidosc}"/>    
+                </p:panelGrid>
+            </p:panel>
+            <p:separator/>
+            <p:commandButton value="Required NoTran" action="#{inicioController.agregarRequiredNoTransaccional()}" update="@form" />
+            <p:commandButton value="Requires New NoTran" action="#{inicioController.agregarRequiredNewNoTransaccional()}" update="@form" />
+            <p:commandButton value="Supports NoTran" action="#{inicioController.agregarSupportsNoTransaccional()}" update="@form" />
+            <p:commandButton value="Mandatory NoTran" action="#{inicioController.agregarMandatoryNoTransaccional()}" update="@form" />
+            <p:commandButton value="No Supported NoTran" action="#{inicioController.agregarNotSupportedNoTransaccional()}" update="@form" />
+            <p:commandButton value="Never NoTran" action="#{inicioController.agregarNeverNoTransaccional()}" update="@form" />
+            <p:separator/>
+            <p:commandButton value="Required Tran" action="#{inicioController.agregarRequiredTransaccional()}" update="@form" />
+            <p:commandButton value="Required New Tran" action="#{inicioController.agregarRequiresNewTransaccional()}" update="@form" />
+            <p:commandButton value="Supports Tran" action="#{inicioController.agregarSupportsTransaccional()}" update="@form" />
+            <p:commandButton value="Mandatory Tran" action="#{inicioController.agregarMandatoryTransaccional()}" update="@form" />
+            <p:commandButton value="Not Supported Tran" action="#{inicioController.agregarNotSupportedTransaccional()}" update="@form" />
+            <p:commandButton value="Never Tran" action="#{inicioController.agregarNeverTransaccional()}" update="@form" />
+        </h:form>
+    </h:body>
+</html>
+
